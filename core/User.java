@@ -11,7 +11,7 @@ import java.util.List;
  * A local representation of the user class. Is created by UserManager to manipulate user data locally, so the database only
  * has to be queried once.
  * 
- * by: William Sou
+ * by: Robby Larsen
  */
 
 public class User {
