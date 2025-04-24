@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6BB3E3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.UserPageController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6BB3E3;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="398.0" prefWidth="175.0" spacing="20.0" style="-fx-background-color: #F2F7FF;">
+                     <children>
+                        <Button fx:id="questionBtn" mnemonicParsing="false" onAction="#handleQuestion" prefHeight="26.0" prefWidth="115.0" text="Ask a Question" />
+                        <Button fx:id="viewArticlesBtn" mnemonicParsing="false" onAction="#handleViewArticles" prefHeight="26.0" prefWidth="115.0" text="View Articles" />
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#handleLogout" prefHeight="26.0" prefWidth="115.0" text="Logout" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="204.0" prefWidth="136.0">
+               <children>
+                  <AnchorPane fx:id="questionPane" disable="true" layoutX="10.0" layoutY="14.0" prefHeight="382.0" prefWidth="397.0" style="-fx-background-color: #F2F7FF;" visible="false">
+                     <children>
+                        <TextArea fx:id="questionTextArea" layoutX="99.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0" promptText="Type question here" />
+                        <Button fx:id="sendButton" layoutX="272.0" layoutY="329.0" mnemonicParsing="false" text="Send" onAction="#handleSendQuestion" />
+                        <ComboBox fx:id="questionTypeMenu" layoutX="124.0" layoutY="46.0" prefWidth="150.0" promptText="Question Type" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

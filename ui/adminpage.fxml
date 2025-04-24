@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6BB3E3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AdminPageController">
+   <children>
+      <SplitPane dividerPositions="0.29" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6BB3E3;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="398.0" prefWidth="175.0" spacing="20.0" style="-fx-background-color: #F2F7FF;">
+                     <children>
+                        <Button fx:id="listUsersBtn" mnemonicParsing="false" onAction="#handleListUsers" prefHeight="20.0" prefWidth="100.0" text="List Users" />
+                        <Button fx:id="editUsersBtn" mnemonicParsing="false" onAction="#handleEditUsers" prefHeight="20.0" prefWidth="100.0" text="Edit User" />
+                        <Button fx:id="inviteUserBtn" mnemonicParsing="false" onAction="#handleInviteUser" prefHeight="20.0" prefWidth="100.0" text="Invite User" />
+                        <Button fx:id="articleBtn" mnemonicParsing="false" onAction="#handleArticle" prefHeight="20.0" prefWidth="100.0" text="Articles" />
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#handleLogout" prefHeight="20.0" prefWidth="100.0" text="Logout" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane fx:id="searchUserView" prefHeight="398.0" prefWidth="416.0" style="-fx-background-color: #6BB3E3;">
+                     <children>
+                        <BorderPane fx:id="editUserView" disable="true" prefHeight="400.0" prefWidth="422.0" visible="false">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <top>
+                              <VBox prefHeight="56.0" prefWidth="396.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="selectUserField" promptText="Search for username" />
+                                    <Button fx:id="searchUser" mnemonicParsing="false" onAction="#handleSearchUser" prefHeight="20.0" prefWidth="100.0" text="Search" />
+                                 </children>
+                              </VBox>
+                           </top>
+                           <right>
+                              <ListView fx:id="targetUserView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </right>
+                           <left>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="resetUserBtn" mnemonicParsing="false" onAction="#handleResetUser" prefHeight="20.0" prefWidth="100.0" text="Reset User" />
+                                    <Button fx:id="deleteUserBtn" mnemonicParsing="false" onAction="#handleDeleteUser" prefHeight="20.0" prefWidth="100.0" text="Delete User" />
+                                    <Button fx:id="changleRolesBtn" mnemonicParsing="false" onAction="#handleChangeRoles" prefHeight="20.0" prefWidth="100.0" text="Change Roles" />
+                                 </children>
+                              </VBox>
+                           </left>
+                           <center>
+                              <VBox fx:id="roleControls" alignment="CENTER" disable="true" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="desiredRoleField" promptText="Role" />
+                                    <Button fx:id="addRoleBtn" mnemonicParsing="false" onAction="#handleAddRole" prefWidth="100.0" text="Add" />
+                                    <Button fx:id="removeRoleBtn" mnemonicParsing="false" onAction="#handleRemoveRole" prefWidth="100.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <ListView fx:id="listUsersView" disable="true" prefHeight="398.0" prefWidth="422.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

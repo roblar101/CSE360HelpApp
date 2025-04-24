@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6BB3E3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginPageController">
+    <children>
+      <Pane fx:id="initializeAccountPane" layoutX="211.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F7FF;" visible="false">
+         <children>
+            <VBox layoutX="21.0" layoutY="22.0" prefHeight="158.0" prefWidth="159.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="createAccountUsernameField" prefHeight="3.0" prefWidth="159.0" promptText="Username" />
+                  <PasswordField fx:id="createAccountPasswordField" promptText="Password" />
+                  <PasswordField fx:id="confirmPasswordField" promptText="Re-enter password" />
+                  <Button fx:id="createAccountBtn" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="26.0" prefWidth="159.0" text="Login" textOverrun="CENTER_ELLIPSIS">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+        <Pane fx:id="loginPane" layoutX="212.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F7FF;">
+            <children>
+                <TextField fx:id="usernameField" layoutX="20.0" layoutY="36.0" promptText="Username" />
+                <PasswordField fx:id="passwordField" layoutX="20.0" layoutY="75.0" promptText="Password" />
+                <Button fx:id="loginButton" layoutX="20.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="159.0" text="Login" textOverrun="CENTER_ELLIPSIS">
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+            </children>
+        </Pane>
+      <Pane fx:id="finalizeAccountPane" layoutX="212.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F7FF;" visible="false">
+         <children>
+            <VBox layoutX="21.0" layoutY="22.0" prefHeight="158.0" prefWidth="159.0">
+               <children>
+                  <TextField fx:id="firstNameField" prefHeight="3.0" prefWidth="159.0" promptText="First name" />
+                  <TextField fx:id="middleNameField" promptText="Middle Name" />
+                  <TextField fx:id="lastNameField" prefHeight="3.0" prefWidth="159.0" promptText="Last name" />
+                  <TextField fx:id="preferredNameField" prefHeight="3.0" prefWidth="159.0" promptText="Preferred Name" />
+                  <TextField fx:id="emailAddressField" prefHeight="3.0" prefWidth="159.0" promptText="Email Address" />
+                  <Button fx:id="finializeAccountBtn" mnemonicParsing="false" onAction="#handleFinializeAccount" prefHeight="26.0" prefWidth="159.0" text="Finalize Account" textOverrun="CENTER_ELLIPSIS">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+        <Label id="instructionalMessage" fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="74.0" prefHeight="26.0" prefWidth="225.0" text="LOGIN">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+        <Button fx:id="inviteCodeButton" layoutX="459.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleInviteCode" text="I have an invite code" />
+    </children>
+</AnchorPane>
