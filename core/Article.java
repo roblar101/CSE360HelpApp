@@ -5,7 +5,7 @@
  * 
  * <p> Copyright: Copyright (c) 2024 </p>
  * 
- * @author William Sou
+ * @author Robby Larsen
  * 
  * @version 1.0    2024-10-15    Initial implementation
  */
