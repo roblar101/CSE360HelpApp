@@ -1,3 +1,15 @@
+/**
+ * <p> Title: Article Class </p>
+ * 
+ * <p> Description: Represents an article in the help system with various attributes </p>
+ * 
+ * <p> Copyright: Copyright (c) 2024 </p>
+ * 
+ * @author Robby Larsen
+ * 
+ * @version 1.0    2024-10-15    Initial implementation
+ */
+
 package core;
 
 
